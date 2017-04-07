@@ -1,0 +1,38 @@
+<material>
+</material>
+
+
+<div class="row">
+
+    <div class="col-md-1">
+        <div class="checkbox">
+            <label>
+                <input id="checkMeOut" type="checkbox" name="as" (click)="setCheckbox()">
+                As1
+            </label>
+        </div>
+    </div>
+    <div class="col-md-8">
+
+        <mesh-app (myEvent)="momentapp.buttonReset(); buttonReset()"></mesh-app>
+
+    </div>
+
+    <!--<div class="col-md-1">    </div>-->
+
+
+    <div class="col-md-3">
+
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                Wybierz:
+            </div>
+        </div>
+        <div *ngFor="let element of elements">
+            <button [attr.id]="'cos' + element.idelement" type="button" class="list-group-item" (click)="getMeshElem(element.idelement)">Element: {{element.idelement}}</button>
+        </div>
+        <div style="height: 20px"></div>
+        <moment-app #momentapp></moment-app>
+    </div>
+
+</div>

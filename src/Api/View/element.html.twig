@@ -1,0 +1,15 @@
+{% extends 'Api/View/Layout/layout.html.twig' %}
+
+{% block content %}
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Elements</th>
+        </tr>
+                {% for element in elements %}
+                    <tr><td> {{ element.idelement }} </td></tr>
+                {% endfor %}
+
+    </table>
+
+{% endblock %}
